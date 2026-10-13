@@ -28,8 +28,10 @@ export function OurWorkHero() {
 					</div>
 					<ImagePlaceholder
 						className="min-h-[20rem] sm:min-h-[30rem] lg:min-h-[36rem]"
-						label="Developer placeholder: add a real PRC community photograph"
+						imageSrc="/images/rootwork.png"
+						imageAlt="Participants holding Panchayat Resolution and welfare materials at an event"
 						variant="dark"
+						showImageLabel={false}
 					/>
 				</div>
 			</Container>

@@ -20,29 +20,33 @@ export function TeamSection() {
 				</div>
 
 				{founder ? (
-					<div className="grid gap-10 py-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-20 lg:py-16">
+					<div className="flex flex-col items-center gap-8 py-12 text-center lg:py-16">
 						<ImagePlaceholder
-							className="min-h-[22rem] sm:min-h-[30rem]"
+							className="min-h-0 aspect-[4/5] w-full max-w-md"
 							label="Developer placeholder: founding team field photograph"
 							variant="dark"
 							imageSrc={founder.image}
 							imageAlt={`${founder.name}, ${founder.role}`}
+							imageFit="contain"
+							showImageLabel={false}
 						/>
 						<div>
 							<p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--color-primary)]">Founder &amp; Director</p>
-							<h3 className="mt-5 text-5xl text-[var(--color-primary-dark)] sm:text-7xl">{founder.name}</h3>
+							<h3 className="mt-3 text-5xl text-[var(--color-primary-dark)] sm:text-7xl">{founder.name}</h3>
 						</div>
 					</div>
 				) : null}
 
 				<div className="grid border-t border-[var(--color-primary)]/20 sm:grid-cols-3">
 					{supportingTeam.map((member, index) => (
-						<div key={member.name} className="border-b border-[var(--color-primary)]/20 py-8 sm:border-b-0 sm:border-r sm:px-7 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0">
+						<div key={member.name} className="border-b border-[var(--color-primary)]/20 py-8 sm:border-b-0 sm:border-r sm:px-7 sm:last:border-r-0">
 							<ImagePlaceholder
-								className="mb-7 min-h-52 sm:min-h-60"
+								className="mb-7 min-h-0 aspect-[4/5]"
 								variant="light"
 								imageSrc={member.image}
 								imageAlt={`${member.name}, ${member.role}`}
+								imageFit="contain"
+								showImageLabel={false}
 							/>
 							<p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--color-primary)]">0{index + 1}</p>
 							<h3 className="mt-5 text-3xl text-[var(--color-primary-dark)]">{member.name}</h3>

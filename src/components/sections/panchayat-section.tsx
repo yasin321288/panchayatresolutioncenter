@@ -26,7 +26,12 @@ export function PanchayatSection() {
 					<div className="lg:sticky lg:top-32">
 						<Eyebrow>Why Panchayat?</Eyebrow>
 						<h2 className="mt-6 max-w-md text-[var(--color-primary-dark)]">People. Dialogue. Resolution.</h2>
-						<ImagePlaceholder className="mt-12 min-h-72" label="Developer placeholder: Panchayat dialogue photograph" />
+						<ImagePlaceholder
+							className="mt-12 min-h-0 aspect-[3/2]"
+							imageSrc="/images/panchayatResolution.png"
+							imageAlt="Participants holding legal aid and mediation books at a PRC event"
+							showImageLabel={false}
+						/>
 					</div>
 					<div className="divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
 						{storyWords.map((item, index) => (

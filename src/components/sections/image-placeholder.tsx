@@ -7,6 +7,8 @@ type ImagePlaceholderProps = {
 	variant?: "light" | "dark" | "peach";
 	imageSrc?: string;
 	imageAlt?: string;
+	imageFit?: "cover" | "contain";
+	showImageLabel?: boolean;
 };
 
 export function ImagePlaceholder({
@@ -15,6 +17,8 @@ export function ImagePlaceholder({
 	variant = "light",
 	imageSrc,
 	imageAlt = "PRC field work",
+	imageFit = "cover",
+	showImageLabel = true,
 }: ImagePlaceholderProps) {
 	return (
 		<div
@@ -27,7 +31,13 @@ export function ImagePlaceholder({
 			)}
 		>
 			{imageSrc ? (
-				<Image src={imageSrc} alt={imageAlt} fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover" />
+				<Image
+					src={imageSrc}
+					alt={imageAlt}
+					fill
+					sizes="(max-width: 640px) 100vw, 50vw"
+					className={imageFit === "contain" ? "object-contain" : "object-cover"}
+				/>
 			) : (
 				<div
 					className="absolute inset-0 -z-10 opacity-40"
@@ -39,9 +49,11 @@ export function ImagePlaceholder({
 					}}
 				/>
 			)}
-			<span className="max-w-48 text-[0.65rem] font-bold uppercase tracking-[0.16em] opacity-70">
-				{imageSrc ? "PRC field work" : label}
-			</span>
+			{showImageLabel && (
+				<span className="max-w-48 text-[0.65rem] font-bold uppercase tracking-[0.16em] opacity-70">
+					{imageSrc ? "PRC field work" : label}
+				</span>
+			)}
 		</div>
 	);
 }

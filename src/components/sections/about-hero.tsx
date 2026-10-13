@@ -30,8 +30,10 @@ export function AboutHero() {
 					</div>
 					<ImagePlaceholder
 						className="min-h-[20rem] sm:min-h-[30rem] lg:min-h-[36rem]"
-						label="Developer placeholder: add a real PRC community photograph"
+						imageSrc="/images/root.png"
+						imageAlt="Illustration of community members discussing village issues with the Panchayat Resolution Centre"
 						variant="dark"
+						showImageLabel={false}
 					/>
 				</div>
 			</Container>

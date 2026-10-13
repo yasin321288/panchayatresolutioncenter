@@ -35,7 +35,7 @@ export function ApproachSection() {
 									className={`group border-b border-white/25 px-0 py-6 text-left transition-colors last:border-b-0 sm:border-b-0 sm:border-r sm:px-5 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0 ${activeStage === index ? "bg-white/[0.06] sm:-mx-1 sm:px-6" : ""}`}
 									aria-pressed={activeStage === index}
 								>
-									<span className={`mb-4 flex items-center justify-between text-xs ${activeStage === index ? "text-[var(--color-orange)]" : "text-white/50"}`}>
+									<span className={`mb-4 flex items-center justify-between text-xs ${activeStage === index ? "text-[var(--color-background)]" : "text-white/50"}`}>
 										0{index + 1}
 										<ArrowRight className="opacity-0 transition-opacity group-hover:opacity-100" aria-hidden="true" size={16} />
 									</span>
@@ -53,7 +53,7 @@ export function ApproachSection() {
 							className="min-h-44 border-b border-white/25 py-10"
 							aria-live="polite"
 						>
-							<p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--color-orange)]">{activeApproach.name}</p>
+							<p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--color-background)]">{activeApproach.name}</p>
 							<p className="mt-4 max-w-xl font-serif text-3xl leading-tight text-[var(--color-background)] sm:text-4xl">{activeApproach.description}</p>
 						</motion.div>
 					</div>

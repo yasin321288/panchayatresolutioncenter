@@ -49,7 +49,8 @@ export function HomeHero() {
 					>
 						<ImagePlaceholder
 							className="min-h-[20rem] sm:min-h-[30rem] lg:min-h-[38rem]"
-							label="Developer placeholder: add a real PRC community photograph"
+							imageSrc="/images/prc-founding-team-field-visit.png"
+							imageAlt="The Panchayat Resolution Centre team outside Ayushman Arogya Mandir in Janti Kalan"
 							variant="dark"
 						/>
 					</motion.div>
